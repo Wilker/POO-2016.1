@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.pkg2016.pkg1;
+package Lista1;
 
 import java.util.Scanner;
 
