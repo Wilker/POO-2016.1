@@ -24,7 +24,7 @@ public class Main {
         agenda.inserePessoa("João", 26);
         
         agenda.listaPorIdade();
-        System.out.println();
+        System.out.println( );
         agenda.listaPorNome();
     }
 }

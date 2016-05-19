@@ -14,16 +14,16 @@ class Pessoa {
     private String nome;
     private int idade;
 
-    public Pessoa(String nome, int idade) {
+    Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
-    public String getNome() {
+    String getNome() {
         return nome;
     }
 
-    public int getIdade() {
+    int getIdade() {
         return idade;
     }
 
