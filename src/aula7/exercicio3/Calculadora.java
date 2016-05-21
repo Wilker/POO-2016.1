@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Calculadora {
 
-    private float memória;
+    private float memoria;
     private final int SOMA = 1;
     private final int SUBTRAI = 2;
     private final int MULTIPLICA = 3;
@@ -22,31 +22,40 @@ public class Calculadora {
     private final int SAIR = 6;
 
     public Calculadora() {
-        System.out.println(memória);
+        System.out.println(memoria);
     }
 
-    private void somar(float número) {
-        memória += número;
+    private void somar(float numero) {
+        memoria += numero;
         exibeMemoria();
     }
 
-    private void subtrair(float número) {
-        memória -= número;
+    private void subtrair(float numero) {
+        memoria -= numero;
         exibeMemoria();
     }
 
-    private void multiplicar(float número) {
-        memória *= número;
+    private void multiplicar(float numero) {
+        memoria *= numero;
         exibeMemoria();
     }
 
-    private void dividir(float número) {
-        memória /= número;
+    private void limpaMemoria() {
+        memoria = 0.0f;
+        exibeMemoria();
+    }
+
+    private void dividir(float numero) {
+        if (numero == 0) {
+            System.out.println("Impossível dividir por 0");
+        } else {
+            memoria /= numero;
+        }
         exibeMemoria();
     }
 
     void exibeMemoria() {
-        System.out.println(memória);
+        System.out.println(memoria);
     }
 
     private float lêEntrada() {
@@ -78,7 +87,7 @@ public class Calculadora {
                 multiplicar(lêEntrada());
                 return true;
             case LIMPA_MEM:
-                memória = 0.0f;
+                limpaMemoria();
                 return true;
             case SAIR:
                 return false;
