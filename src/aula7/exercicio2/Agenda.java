@@ -22,11 +22,11 @@ public class Agenda {
                 agenda[i] = pessoa;
                 inseriu = true;
             }
-            i++;
             if (i == agenda.length - 1) {
                 System.out.println("agenda cheia");
                 break;
             }
+            i++;
         }
     }
 
